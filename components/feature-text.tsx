@@ -6,14 +6,13 @@ import CTASection from "./cta-section";
 
 export default function FeatureText() {
   return (
-    <div className="w-full flex flex-col items-center mt-20 px-4">
+    <div className="w-full flex flex-col items-center px-4">
       <div className="max-w-3xl text-black text-left">
         <p
-          className="mb-10 leading-tight"
+          className="mb-10 leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
           style={{
             fontFamily: 'General Sans, sans-serif',
             fontWeight: 500,
-            fontSize: '48px',
             lineHeight: 1.1,
           }}
         >
@@ -21,11 +20,10 @@ export default function FeatureText() {
           It helps you notify vehicle owners blocking your way — no honking, no waiting, no awkward calls.
         </p>
         <p
-          className="leading-tight"
+          className="leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
           style={{
             fontFamily: 'General Sans, sans-serif',
             fontWeight: 500,
-            fontSize: '48px',
             lineHeight: 1.1,
           }}
         >

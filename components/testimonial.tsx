@@ -49,11 +49,10 @@ const Testimonial = () => {
   return (
   <section id="testimonial" className="w-full flex flex-col items-center mt-24 px-4">
       <div
-        className={`max-w-5xl w-full mb-8 transition-all duration-300 ease-in-out ${morph ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+        className={`max-w-5xl w-full mb-8 transition-all duration-300 ease-in-out ${morph ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl`}
         style={{
           fontFamily: "General Sans, sans-serif",
           fontWeight: 500,
-          fontSize: "2.75rem",
           lineHeight: 1.1,
         }}
       >
@@ -64,27 +63,25 @@ const Testimonial = () => {
           <img
             src={t.avatar}
             alt={t.name}
-            className="w-16 h-16 rounded-full object-cover border border-gray-200 transition-all duration-300 ease-in-out"
+            className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border border-gray-200 transition-all duration-300 ease-in-out"
             style={{ opacity: morph ? 1 : 0, transform: morph ? 'scale(1)' : 'scale(0.95)' }}
           />
           <div>
             <div
-              className="text-black"
+              className="text-black text-base sm:text-lg md:text-xl"
               style={{
                 fontFamily: "General Sans, sans-serif",
                 fontWeight: 500,
-                fontSize: "1.25rem",
                 lineHeight: 1.2,
               }}
             >
               {t.name}
             </div>
             <div
-              className="text-gray-500"
+              className="text-gray-500 text-sm sm:text-base md:text-lg"
               style={{
                 fontFamily: "General Sans, sans-serif",
                 fontWeight: 400,
-                fontSize: "1.1rem",
               }}
             >
               {t.city}
@@ -103,21 +100,19 @@ const Testimonial = () => {
             onClick={() => handleSetActive(idx)}
           >
             <span
-              className="text-black mb-1"
+              className="text-black mb-1 text-sm sm:text-base md:text-lg"
               style={{
                 fontFamily: "General Sans, sans-serif",
                 fontWeight: active === idx ? 500 : 400,
-                fontSize: "1.1rem",
               }}
             >
               {person.name}
             </span>
             <span
-              className="text-gray-500"
+              className="text-gray-500 text-xs sm:text-sm md:text-base"
               style={{
                 fontFamily: "General Sans, sans-serif",
                 fontWeight: 400,
-                fontSize: "1rem",
               }}
             >
               {person.city}

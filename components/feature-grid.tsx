@@ -49,49 +49,52 @@ const features = [
 
 const FeatureGrid = () => {
   return (
-    <section className="w-full bg-[#f7f7f8] py-16" style={{ fontFamily: 'General Sans, sans-serif' }}>
-      <h2
-        className="text-center text-black mb-12 leading-tight"
-        style={{
-          fontFamily: 'General Sans, sans-serif',
-          fontWeight: 500,
-          fontSize: '68px',
-          lineHeight: 1.1,
-        }}
-      >
-        Let Me Go helps you...
-      </h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-        {features.map((f, i) => (
-          <div key={i} className="bg-white rounded-3xl p-8 flex flex-col gap-4 shadow-sm">
-            <div>{f.icon}</div>
-            <div>
-              <div
-                className="text-black mb-2 leading-tight text-left"
-                style={{
-                  fontFamily: 'General Sans, sans-serif',
-                  fontWeight: 500,
-                  fontSize: '2.5rem', // 40px
-                  lineHeight: 1.1,
-                  textAlign: 'left',
-                }}
-              >
-                {f.title}
-              </div>
-              <div
-                className="text-gray-500 text-left"
-                style={{
-                  fontFamily: 'General Sans, sans-serif',
-                  fontWeight: 500,
-                  fontSize: '1.25rem', // 20px
-                  textAlign: 'left',
-                }}
-              >
-                {f.desc}
+    <section className="relative w-full py-16" style={{ fontFamily: 'General Sans, sans-serif' }}>
+      {/* Full-width background */}
+      <div className="absolute inset-0 w-screen bg-[#f7f7f8] left-1/2 transform -translate-x-1/2"></div>
+      
+      {/* Content container */}
+      <div className="relative z-10">
+        <h2
+          className="text-center text-black mb-12 leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+          style={{
+            fontFamily: 'General Sans, sans-serif',
+            fontWeight: 500,
+            lineHeight: 1.1,
+          }}
+        >
+          Let Me Go helps you...
+        </h2>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+          {features.map((f, i) => (
+            <div key={i} className="bg-white rounded-3xl p-6 sm:p-8 flex flex-col gap-4 shadow-sm">
+              <div>{f.icon}</div>
+              <div>
+                <div
+                  className="text-black mb-2 leading-tight text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl"
+                  style={{
+                    fontFamily: 'General Sans, sans-serif',
+                    fontWeight: 500,
+                    lineHeight: 1.1,
+                    textAlign: 'left',
+                  }}
+                >
+                  {f.title}
+                </div>
+                <div
+                  className="text-gray-500 text-left text-base sm:text-lg md:text-xl"
+                  style={{
+                    fontFamily: 'General Sans, sans-serif',
+                    fontWeight: 500,
+                    textAlign: 'left',
+                  }}
+                >
+                  {f.desc}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

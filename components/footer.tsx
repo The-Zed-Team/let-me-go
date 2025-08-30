@@ -1,0 +1,29 @@
+import React from "react";
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+  <footer className="w-full border-t border-gray-200 bg-[#fafafa] py-8 mt-12 mt-auto">
+      <div className="container mx-auto flex flex-col items-center justify-center">
+        <div
+          className="w-full max-w-2xl px-4 text-gray-600 text-base flex flex-col gap-4 md:flex-row md:gap-0 md:max-w-7xl md:justify-center md:items-center"
+          style={{ fontFamily: 'General Sans, sans-serif' }}
+        >
+          <div className="flex flex-col gap-1 md:flex-row md:gap-10 w-full md:w-auto md:items-center md:justify-center">
+            <span className="flex items-center gap-1 whitespace-nowrap md:mr-8">
+              <span className="text-lg">©</span> 2025
+            </span>
+            <Link href="#" className="hover:text-black transition-colors">Company</Link>
+            <Link href="#" className="hover:text-black transition-colors">Support</Link>
+            <Link href="#" className="hover:text-black transition-colors">Resources</Link>
+            <Link href="#" className="hover:text-black transition-colors">Privacy policy</Link>
+            <Link href="#" className="hover:text-black transition-colors">Terms of use</Link>
+            <Link href="#" className="hover:text-black transition-colors">Instagram</Link>
+            <Link href="#" className="hover:text-black transition-colors">TikTok</Link>
+            <Link href="#" className="hover:text-black transition-colors">LinkedIn</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

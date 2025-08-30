@@ -23,9 +23,9 @@ export default function Home() {
   return (
     <>
       {/* Hero section - positioned lower on screen */}
-      <main className="flex flex-col items-center justify-end min-h-screen px-4 pb-20 relative overflow-hidden" style={{ fontFamily: 'General Sans, sans-serif' }}>
+      <main className="flex flex-col items-center justify-end min-h-screen px-4 relative gap-16 overflow-hidden" style={{ fontFamily: 'General Sans, sans-serif' }}>
         {/* Text content positioned in lower portion */}
-        <div className="flex flex-col items-center justify-center z-20 max-w-4xl mx-auto mb-12">
+        <div className="flex flex-col items-center justify-center z-20 max-w-4xl mx-auto mb-12 mt-32">
           <h1
             className="text-center text-black mb-6 leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             style={{
@@ -58,12 +58,12 @@ export default function Home() {
         </div>
 
         {/* Images arrangement - positioned below the text in lower portion */}
-        <div className="relative flex items-center justify-center w-full max-w-6xl mx-auto z-10 mb-8">
+        <div className="relative flex items-center justify-center w-full max-w-[720px] mx-auto z-10 -mb-24 ">
           {/* Left background shape */}
           <img
             src="/1.png"
             alt="Background shape left"
-            className="absolute left-0 top-1/2 w-48 sm:w-64 md:w-80 lg:w-96 transition-transform duration-300"
+            className="absolute left-0 top-36 w-48 sm:w-64 md:w-80 lg:w-96 transition-transform duration-300"
             style={{
               transform: `translateY(-${50 + parallax * 0.3}%) translateX(-20%)`
             }}
@@ -91,10 +91,7 @@ export default function Home() {
 
       {/* Smooth transition section */}
       <section 
-        className="w-full bg-gradient-to-b from-gray-50 to-white py-20"
-        style={{
-          background: 'linear-gradient(180deg, #f9fafb 0%, #ffffff 100%)'
-        }}
+        className="w-full bg-gradient-to-b py-20"
       >
         <FeatureText />
       </section>

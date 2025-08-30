@@ -35,11 +35,11 @@ export default function VideoPlayer() {
   };
 
   return (
-    <div className="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-lg">
+    <div className="relative w-full md:max-w-6xl md:aspect-video rounded-3xl overflow-hidden shadow-lg">
       <video
         ref={videoRef}
         src="/vid.mp4"
-        className="w-full h-auto rounded-3xl bg-black"
+        className="w-full h-auto max-sm:h-[800px] object-cover"
         onClick={handlePlayPause}
         onPlay={() => setPlaying(true)}
         onPause={() => setPlaying(false)}
@@ -50,9 +50,11 @@ export default function VideoPlayer() {
         preload="auto"
       />
       <div className="absolute left-6 bottom-6 flex gap-3 z-10">
+        
+        <div className="blur-in bg-white/30 rounded-full">
         <button
           onClick={handlePlayPause}
-          className="bg-black/60 text-white px-4 py-2 rounded-full flex items-center gap-2 text-lg shadow"
+          className=" text-white px-2 py-1 rounded-full flex items-center gap-2 text-sm "
         >
           {playing ? (
             <span>&#10073;&#10073; Pause</span>
@@ -60,16 +62,7 @@ export default function VideoPlayer() {
             <span>&#9654; Play</span>
           )}
         </button>
-        <button
-          onClick={handleMuteToggle}
-          className="bg-black/60 text-white px-4 py-2 rounded-full flex items-center gap-2 text-lg shadow"
-        >
-          {muted ? (
-            <span>&#128263; Unmute</span>
-          ) : (
-            <span>&#128266; Mute</span>
-          )}
-        </button>
+        </div>
       </div>
     </div>
   );

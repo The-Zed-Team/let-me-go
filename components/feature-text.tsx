@@ -6,8 +6,8 @@ import CTASection from "./cta-section";
 
 export default function FeatureText() {
   return (
-    <div className="w-full flex flex-col items-center px-4">
-      <div className="max-w-3xl text-black text-left">
+    <div className="w-full flex flex-col items-center md:px-4">
+      <div className="max-w-3xl text-black text-left max-sm:px-4">
         <p
           className="mb-10 leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
           style={{

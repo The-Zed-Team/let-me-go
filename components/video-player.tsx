@@ -1,10 +1,22 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 export default function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
   const [muted, setMuted] = useState(true);
+
+  useEffect(() => {
+    // Ensure video autoplays when component mounts
+    if (videoRef.current) {
+      videoRef.current.play().then(() => {
+        setPlaying(true);
+      }).catch((error) => {
+        console.log("Autoplay failed:", error);
+        // Autoplay failed, user will need to click play
+      });
+    }
+  }, []);
 
   const handlePlayPause = () => {
     if (!videoRef.current) return;
@@ -33,6 +45,9 @@ export default function VideoPlayer() {
         onPause={() => setPlaying(false)}
         autoPlay
         muted={muted}
+        loop
+        playsInline
+        preload="auto"
       />
       <div className="absolute left-6 bottom-6 flex gap-3 z-10">
         <button

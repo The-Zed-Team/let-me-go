@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Let Me Go",
   description: "Let Me Go – Instantly notify vehicle owners, protect your privacy, and make parking stress-free.",
+  icons: {
+    icon: "/android-chrome-512x512.png",
+    shortcut: "/android-chrome-512x512.png",
+    apple: "/android-chrome-512x512.png",
+  },
 };
 
 export default function RootLayout({

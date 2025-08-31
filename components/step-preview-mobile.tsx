@@ -2,6 +2,7 @@
 import React from 'react'
 import { DotPattern } from './magicui/dot-pattern';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const StepPreviewMobile = () => {
 
@@ -44,7 +45,7 @@ const StepPreviewMobile = () => {
                                 />
                                 <div className='absolute right-1/2 translate-x-1/2 -bottom-[30%]'>
 
-                                <img
+                                <Image
                                     src={step.image}
                                     width={320}
                                     height={732}

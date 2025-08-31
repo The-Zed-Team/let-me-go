@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useState } from "react";
 
 const testimonials = [
@@ -55,7 +56,9 @@ const Testimonial = () => {
           “{t.quote}”
         </blockquote>
         <div className="flex items-center gap-4 mt-8">
-          <img
+          <Image
+            width={64}
+            height={64}
             src={t.avatar}
             alt={t.name}
             className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border border-gray-200 transition-all duration-300 ease-in-out"

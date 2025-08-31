@@ -1,7 +1,7 @@
 "use client"
 
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, } from 'react'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -78,7 +78,7 @@ const StepPreview = () => {
                 {
                     stepData.map((step, i) => (
 
-                        <div className='min-h-dvh'>
+                        <div key={i} className='min-h-dvh'>
                             <div className='flex flex-col gap-6'>
                                 <div className='capitalize text-lg text-[#1B2BB8]'>step {i + 1}</div>
                                 <div className='text-black font-general-sans-medium text-4xl'>{step.title}</div>

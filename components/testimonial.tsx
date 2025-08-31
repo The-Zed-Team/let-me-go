@@ -47,14 +47,9 @@ const Testimonial = () => {
   };
 
   return (
-  <section id="testimonial" className="w-full flex flex-col items-center mt-24 px-4">
+  <section id="testimonial" className="w-full flex flex-col items-center mt-24 px-4 gap-16">
       <div
-        className={`max-w-5xl w-full mb-8 transition-all duration-300 ease-in-out ${morph ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl`}
-        style={{
-          fontFamily: "General Sans, sans-serif",
-          fontWeight: 500,
-          lineHeight: 1.1,
-        }}
+        className={`max-w-4xl w-full mb-8 transition-all duration-300 ease-in-out ${morph ? 'opacity-100 scale-100' : 'opacity-0 scale-95'} text-xl sm:text-2xl md:text-3xl lg:text-4xl font-general-sans-medium`}
       >
         <blockquote>
           “{t.quote}”
@@ -64,16 +59,10 @@ const Testimonial = () => {
             src={t.avatar}
             alt={t.name}
             className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border border-gray-200 transition-all duration-300 ease-in-out"
-            style={{ opacity: morph ? 1 : 0, transform: morph ? 'scale(1)' : 'scale(0.95)' }}
           />
           <div>
             <div
               className="text-black text-base sm:text-lg md:text-xl"
-              style={{
-                fontFamily: "General Sans, sans-serif",
-                fontWeight: 500,
-                lineHeight: 1.2,
-              }}
             >
               {t.name}
             </div>
@@ -89,12 +78,12 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-      <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-4 gap-0 rounded-2xl overflow-hidden border border-gray-200 bg-white">
+      <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-4 gap-0 rounded-2xl overflow-hidden border border-gray-200 ">
         {testimonials.map((person, idx) => (
           <button
             key={person.name}
-            className={`flex flex-col items-center py-6 px-2 sm:px-0 transition bg-gray-100 sm:bg-white border-b sm:border-b-0 sm:border-r border-gray-200 last:border-b-0 sm:last:border-r-0 ${
-              active === idx ? "bg-gray-100" : "hover:bg-gray-50"
+            className={`flex flex-col items-center py-8 px-2 sm:px-0 transition border-b sm:border-b-0 sm:border-r border-gray-300 last:border-b-0 sm:last:border-r-0 ${
+              active === idx ? "bg-[#E6E6E6]" : "hover:bg-[#E6E6E6]"
             }`}
             style={{ width: "100%" }}
             onClick={() => handleSetActive(idx)}

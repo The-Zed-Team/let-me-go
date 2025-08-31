@@ -25,25 +25,15 @@ export default function Home() {
       {/* Hero section - positioned lower on screen */}
       <main className="flex flex-col items-center justify-end min-h-screen px-4 relative gap-16 overflow-hidden" style={{ fontFamily: 'General Sans, sans-serif' }}>
         {/* Text content positioned in lower portion */}
-        <div className="flex flex-col items-center justify-center z-20 max-w-4xl mx-auto mb-12 mt-32">
+        <div className="flex flex-col items-center justify-center z-20 max-w-4xl mx-auto mb-12 mt-52">
           <h1
-            className="text-center text-black mb-6 leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-            style={{
-              fontFamily: 'General Sans, sans-serif',
-              fontWeight: 500,
-              lineHeight: 1.1,
-            }}
+            className="text-center text-black mb-6  text-4xl mdtext-5xl lg:text-6xl font-general-sans-medium"
           >
             Stuck Behind a Badly Parked<br />
             Car? Just Tap, Notify & Go.
           </h1>
           <p
-            className="text-center text-gray-500 max-w-xl mb-8 text-sm sm:text-base md:text-lg lg:text-xl"
-            style={{
-              fontFamily: 'General Sans, sans-serif',
-              fontWeight: 500,
-              lineHeight: 1.4,
-            }}
+            className="text-center text-gray-500 max-w-xl mb-8 text-sm sm:text-base md:text-lg lg:text-2xl leading-tight"
           >
             Let Me Go is a free app that instantly connects you to the owner of the vehicle blocking your way. No honking, no waiting, no stress.
           </p>

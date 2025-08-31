@@ -42,6 +42,9 @@ html {
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --font-general-sans-regular: var(--font-general-sans-regular);
+  --font-general-sans-medium: var(--font-general-sans-medium);
+  --font-general-sans-light: var(--font-general-sans-light);
 }
 
 :root {

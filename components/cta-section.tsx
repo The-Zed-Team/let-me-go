@@ -1,15 +1,10 @@
 import React from "react";
 
 const CTASection = () => (
-  <section className="w-full flex flex-col items-center mt-40 px-4">
-    <div className="flex flex-col items-start w-full max-w-3xl">
+  <section className="w-full flex flex-col items-center my-32 mb-24 px-4 ">
+    <div className="flex flex-col gap-5 items-start w-full max-w-4xl">
       <h2
-        className="text-black mb-8 leading-tight text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
-        style={{
-          fontFamily: 'General Sans, sans-serif',
-          fontWeight: 500,
-          lineHeight: 1.1,
-        }}
+        className="text-black mb-8 font-general-sans-medium text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
       >
         Use Let Me Go to notify faster,<br />
         park smarter, and make every<br />

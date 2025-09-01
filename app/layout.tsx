@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "Let Me Goo",
   description: "Let Me Goo – Instantly notify vehicle owners, protect your privacy, and make parking stress-free.",
   keywords: ['parking', 'vehicle notification', 'car blocking', 'privacy', 'mobile app', 'letmegoo', 'parking solution'],
-  authors: [{ name: 'Let Me Goo Team' }],
+  authors: [{ name: 'Let Me Go Team' }],
   icons: {
     icon: "/android-chrome-512x512.png",
     shortcut: "/android-chrome-512x512.png",
@@ -79,6 +79,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Basic meta tags for WhatsApp compatibility */}
+        <meta name="title" content="Let Me Goo" />
+        <meta name="description" content="Let Me Goo – Instantly notify vehicle owners, protect your privacy, and make parking stress-free." />
+        <meta property="og:image" content="https://www.letmegoo.com/post.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+      </head>
       <body
         className={`${geistSans.variable} 
         ${geistMono.variable}

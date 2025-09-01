@@ -2,12 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 
 const team = [
-  { name: 'James Albert', role: 'Design Director', img: '/avatars/arjun.avif' },
-  { name: 'David M Hower', role: 'Design Director', img: '/avatars/daniel.avif' },
-  { name: 'Dennis Poroma', role: 'Space Planner', img: '/avatars/kavya.avif' },
-  { name: 'Arjun Patel', role: 'Architect', img: '/avatars/arjun.avif' },
-  { name: 'Daniel Scott', role: 'Planner', img: '/avatars/daniel.avif' },
-  { name: 'Kavya Rao', role: 'Interior Lead', img: '/avatars/kavya.avif' },
+  { name: 'Richin R chandran', role: '', img: '/avatars/arjun.avif' },
+  { name: 'Muhammed R', role: '', img: '/avatars/daniel.avif' },
+  { name: 'DARSHAN KUMAR', role: '', img: '/avatars/kavya.avif' },
+  { name: 'Edwin', role: '', img: '/avatars/arjun.avif' },
+  { name: 'Aswanth', role: '', img: '/avatars/daniel.avif' },
+  { name: 'Yasin', role: '', img: '/avatars/kavya.avif' },
+ { name: 'Alan', role: '', img: '/avatars/arjun.avif' },
+  { name: 'Jishnu', role: '', img: '/avatars/daniel.avif' },
+  { name: 'Nifty', role: '', img: '/avatars/kavya.avif' },
 ]
 
 export default function Page() {

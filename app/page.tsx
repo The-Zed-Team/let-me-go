@@ -39,7 +39,7 @@ export default function Home() {
           </p>
           <button
             type="button"
-            className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-[#1a23c3] text-white font-semibold text-sm sm:text-base shadow-md hover:bg-[#111a9c] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a23c3]"
+            className="inline-flex capitalize items-center px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-[#1a23c3] text-white font-semibold text-sm sm:text-base shadow-md hover:bg-[#111a9c] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a23c3]"
             onClick={() => {
               const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
               const iosUrl = 'https://apps.apple.com/in/app/letmegoo/id6751348254';
@@ -47,7 +47,7 @@ export default function Home() {
               window.location.href = isIOS ? iosUrl : androidUrl;
             }}
           >
-            Download Free App <span className="ml-2">→</span>
+            Let's get started <span className="ml-2">→</span>
           </button>
         </div>
 

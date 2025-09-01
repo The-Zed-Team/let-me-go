@@ -1,9 +1,8 @@
-
 'use client';
 import FeatureText from "@/components/feature-text";
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [parallax, setParallax] = useState(0);
@@ -16,6 +15,7 @@ export default function Home() {
       const offset = Math.min(scrollY / 3, 120);
       setParallax(offset);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -47,34 +47,40 @@ export default function Home() {
               window.location.href = isIOS ? iosUrl : androidUrl;
             }}
           >
-            Let's get started <span className="ml-2">→</span>
+            Let&apos;s get started <span className="ml-2">→</span>
           </button>
         </div>
-
         {/* Images arrangement - positioned below the text in lower portion */}
         <div className="relative flex items-center justify-center w-full max-w-[720px] mx-auto z-10 -mb-24 ">
           {/* Left background shape */}
-          <img
+          <Image
             src="/1.png"
             alt="Background shape left"
+            width={384}
+            height={384}
             className="absolute left-0 top-36 w-48 sm:w-64 md:w-80 lg:w-96 transition-transform duration-300"
             style={{
               transform: `translateY(-${50 + parallax * 0.3}%) translateX(-20%)`
             }}
           />
           {/* Right background shape */}
-          <img
+          <Image
             src="/2.png"
             alt="Background shape right"
+            width={384}
+            height={384}
             className="absolute right-0 top-1/2 w-48 sm:w-64 md:w-80 lg:w-96 transition-transform duration-300"
             style={{
               transform: `translateY(-${30 + parallax * 0.2}%) translateX(20%)`
             }}
           />
           {/* Phone image centered */}
-          <img
+          <Image
             src="/phone.png"
             alt="Phone screenshot"
+            width={420}
+            height={600}
+            priority
             className="relative z-10 w-72 sm:w-80 md:w-96 lg:w-[420px] drop-shadow-2xl transition-transform duration-300"
             style={{
               transform: `translateY(-${parallax * 0.1}px)`
@@ -82,7 +88,6 @@ export default function Home() {
           />
         </div>
       </main>
-
       {/* Smooth transition section */}
       <section 
         className="w-full bg-gradient-to-b py-20"
@@ -91,5 +96,4 @@ export default function Home() {
       </section>
     </>
   );
-
 }

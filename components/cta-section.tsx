@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 
 const CTASection = () => (
@@ -10,15 +12,19 @@ const CTASection = () => (
         park smarter, and make every<br />
         ride stress-free.
       </h2>
-      <a
-        href="https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        type="button"
         className="inline-block rounded-full bg-[#3B36F4] px-6 py-2 sm:px-8 sm:py-3 text-white text-base sm:text-lg font-medium shadow transition hover:bg-[#2823c7] focus:outline-none focus:ring-2 focus:ring-[#3B36F4] focus:ring-offset-2 text-left"
         style={{ fontFamily: 'General Sans, sans-serif' }}
+        onClick={() => {
+          const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+          const iosUrl = 'https://apps.apple.com/in/app/letmegoo/id6751348254';
+          const androidUrl = 'https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share';
+          window.location.href = isIOS ? iosUrl : androidUrl;
+        }}
       >
         Download Free App &rarr;
-      </a>
+      </button>
     </div>
   </section>
 );

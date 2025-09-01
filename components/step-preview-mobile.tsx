@@ -10,17 +10,17 @@ const StepPreviewMobile = () => {
         {
             title: "Enter vehicle details",
             description: "Open the app, type in or scan the vehicle number, and connect instantly. No searching, no awkward interactions — just a simple lookup.",
-            image: '/steps/IMG-20250831-WA0016.jpg'
+            image: '/steps/IMG-20250831-WA0018.jpg'
         },
         {
             title: "Notify instantly",
             description: "Send a quick message or photo alert directly to the car owner. Your privacy is protected, and the owner gets the info in real time.",
-            image: "/steps/IMG-20250831-WA0017.jpg"
+            image: "/steps/IMG-20250831-WA0019.jpg"
         },
         {
             title: "Get moving stress-free",
             description: "The owner is notified to clear the way, and you’re back on track. No more honking, waiting, or wasted time in parking chaos.",
-            image: "/steps/IMG-20250831-WA0018.jpg"
+            image: "/steps/IMG-20250831-WA0017.jpg"
         }
     ]
 

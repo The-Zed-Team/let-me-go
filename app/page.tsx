@@ -37,14 +37,18 @@ export default function Home() {
           >
             Let Me Go is a free app that instantly connects you to the owner of the vehicle blocking your way. No honking, no waiting, no stress.
           </p>
-          <Link
-            href="https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
             className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-[#1a23c3] text-white font-semibold text-sm sm:text-base shadow-md hover:bg-[#111a9c] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a23c3]"
+            onClick={() => {
+              const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+              const iosUrl = 'https://apps.apple.com/in/app/letmegoo/id6751348254';
+              const androidUrl = 'https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share';
+              window.location.href = isIOS ? iosUrl : androidUrl;
+            }}
           >
             Download Free App <span className="ml-2">→</span>
-          </Link>
+          </button>
         </div>
 
         {/* Images arrangement - positioned below the text in lower portion */}

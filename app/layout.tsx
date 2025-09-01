@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-
+import localFont from 'next/font/local'
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,6 +24,24 @@ export const metadata: Metadata = {
   },
 };
 
+const General_sans_regular = localFont({
+  src: "../public/fonts/GeneralSans-Regular.otf",
+  variable: "--font-general-sans",
+  display: "swap",
+});
+
+const General_sans_medium = localFont({
+  src: "../public/fonts/GeneralSans-Medium.otf",
+  variable: "--font-general-sans-medium",
+  display: "swap",
+});
+
+const General_sans_light = localFont({
+src: "../public/fonts/GeneralSans-Light.otf",
+  variable: "--font-general-sans-light",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +50,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} 
+        ${geistMono.variable}
+        ${General_sans_regular.variable}
+        ${General_sans_medium.variable}
+        ${General_sans_light.variable}
+        antialiased min-h-screen flex flex-col`}
       >
         <Navbar />
         <main className="flex-1 flex flex-col bg-[#F3F3F3]">

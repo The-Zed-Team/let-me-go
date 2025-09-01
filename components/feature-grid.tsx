@@ -27,19 +27,12 @@ const features = [
 
 const FeatureGrid = () => {
   return (
-    <section className="relative w-full py-16" style={{ fontFamily: 'General Sans, sans-serif' }}>
-      {/* Full-width background */}
-      <div className="absolute inset-0 w-screen left-1/2 transform -translate-x-1/2"></div>
+  <section className="relative w-full py-16 mt-28" >
 
       {/* Content container */}
       <div className="relative z-10">
         <h2
-          className="text-center text-black mb-12 leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
-          style={{
-            fontFamily: 'General Sans, sans-serif',
-            fontWeight: 500,
-            lineHeight: 1.1,
-          }}
+          className="text-center text-black mb-12 leading-tight text-3xl sm:text-4xl md:text-5xl font-general-sans-medium"
         >
           Let Me Go helps you...
         </h2>
@@ -58,23 +51,12 @@ const FeatureGrid = () => {
               </div>
               <div>
                 <div
-                  className="text-black mb-2 leading-tight space-y-2 text-left text-2xl "
-                  style={{
-                    fontFamily: 'General Sans, sans-serif',
-                    fontWeight: 500,
-                    lineHeight: 1.1,
-                    textAlign: 'left',
-                  }}
+                  className="text-black mb-4 leading-tight text-left text-2xl font-general-sans-medium"
                 >
                   {f.title}
                 </div>
                 <div
-                  className="text-gray-500 text-left text-base sm:text-lg md:text-xl"
-                  style={{
-                    fontFamily: 'General Sans, sans-serif',
-                    fontWeight: 500,
-                    textAlign: 'left',
-                  }}
+                  className="text-gray-500 text-left text-base font-general-sans-regular leading-[1.3]"
                 >
                   {f.desc}
                 </div>

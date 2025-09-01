@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import { PlayIcon, PauseIcon, VolumeXIcon, Volume2Icon } from "lucide-react";
 
 export default function VideoPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -57,11 +58,36 @@ export default function VideoPlayer() {
           className=" text-white px-2 py-1 rounded-full flex items-center gap-2 text-sm "
         >
           {playing ? (
-            <span>&#10073;&#10073; Pause</span>
+            <>
+              <PauseIcon className="w-4 h-4" aria-hidden />
+              <span className="sr-only">Pause</span>
+            </>
           ) : (
-            <span>&#9654; Play</span>
+            <>
+              <PlayIcon className="w-4 h-4" aria-hidden />
+              <span className="sr-only">Play</span>
+            </>
           )}
         </button>
+        </div>
+        <div className="blur-in bg-white/30 rounded-full">
+          <button
+            onClick={handleMuteToggle}
+            aria-pressed={muted}
+            className=" text-white px-2 py-1 rounded-full flex items-center gap-2 text-sm "
+          >
+            {muted ? (
+              <>
+                <VolumeXIcon className="w-4 h-4" aria-hidden />
+                <span className="sr-only">Unmute</span>
+              </>
+            ) : (
+              <>
+                <Volume2Icon className="w-4 h-4" aria-hidden />
+                <span className="sr-only">Mute</span>
+              </>
+            )}
+          </button>
         </div>
       </div>
     </div>

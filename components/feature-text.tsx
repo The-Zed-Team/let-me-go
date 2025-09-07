@@ -44,7 +44,7 @@ export default function FeatureText() {
   <div className="md:hidden">
     <StepPreviewMobile />
   </div>
-  <Testimonial />
+{/*   <Testimonial /> */}
   <CTASection />
     </div>
   );

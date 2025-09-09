@@ -34,7 +34,7 @@ const FeatureGrid = () => {
         <h2
           className="text-center text-black mb-12 leading-tight text-3xl sm:text-4xl md:text-5xl font-general-sans-medium"
         >
-          Let Me Go helps you...
+          Let Me Goo helps you...
         </h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 max-sm:gap-4 gap-6 px-4">
           {features.map((f, i) => (

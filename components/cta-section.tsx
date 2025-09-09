@@ -10,7 +10,7 @@ const CTASection = () => (
       <h2
         className="text-black mb-8 font-general-sans-medium text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
       >
-        Use Let Me Go to notify faster,<br />
+        Use Let Me Goo to notify faster,<br />
         park smarter, and make every<br />
         ride stress-free.
       </h2>

@@ -33,10 +33,10 @@ export default function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
-                <Link href="/whyletmego" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}>Why Let Me Go</Link>
+                <Link href="/whyletmego" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}>Why Let Me Goo?</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+             {/* <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <a href="#testimonial" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
                   e.preventDefault();
@@ -51,7 +51,7 @@ export default function Navbar() {
                   }
                 }}>Wall Of Love</a>
               </NavigationMenuLink>
-            </NavigationMenuItem>
+            </NavigationMenuItem>*/}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link href="/contact" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}>Contact</Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
         <div className="absolute top-full left-0 w-full bg-[#fafafa] shadow-lg z-50 flex flex-col items-center py-4 nav-links-mobile md:hidden animate-fade-in">
           <Link href="/" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="/team" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Team</Link>
-          <Link href="/whyletmego" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Why Let Me Go</Link>
+          <Link href="/whyletmego" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Why Let Me Goo?</Link>
           <Link href="/contact" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Contact</Link>
           <a href="#testimonial" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
             e.preventDefault();

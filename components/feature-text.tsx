@@ -18,7 +18,7 @@ export default function FeatureText() {
         startOnView
           className="mb-10 leading-tight text-4xl lg:text-5xl font-general-sans-medium tracking-tight"
         >
-          Let Me Go connects drivers instantly.
+          Let Me Goo connects drivers instantly.
           It helps you notify vehicle owners blocking your way — no honking, no waiting, no awkward calls.
         </TextAnimate>
         <TextAnimate

@@ -80,7 +80,7 @@ export default function Navbar() {
           <Link href="/team" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Team</Link>
           <Link href="/whyletmego" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Why Let Me Goo?</Link>
           <Link href="/contact" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Contact</Link>
-          <a href="#testimonial" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
+           {/*  <a href="#testimonial" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
             e.preventDefault();
             setMenuOpen(false);
             setTimeout(() => {
@@ -94,7 +94,7 @@ export default function Navbar() {
                 }, 400);
               }
             }, 100);
-          }}>Wall Of Love</a>
+          }}>Wall Of Love</a> */}
           <a
             href="https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share"
             target="_blank"

@@ -37,7 +37,7 @@ export default function Home() {
           <p
             className="text-center text-gray-500 max-w-xl mb-8 text-sm sm:text-base md:text-lg lg:text-2xl leading-tight"
           >
-            Let Me Go is a free app that instantly connects you to the owner of the vehicle blocking your way. No honking, no waiting, no stress.
+            Let Me Goo is a free app that instantly connects you to the owner of the vehicle blocking your way. No honking, no waiting, no stress.
           </p>
             <button
             type="button"

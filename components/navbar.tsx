@@ -102,7 +102,7 @@ export default function Navbar() {
             className="download-btn font-normal text-white transition-colors text-sm download-rise mt-4"
             style={{ fontFamily: 'Familjen Grotesk, sans-serif', width: '90%', justifyContent: 'center' }}
           >
-            Download Let Me Go
+            Download Let Me Goo
             <span className="ml-3 inline-flex items-center">
               {typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
                 ? <SiAppstore aria-hidden />
@@ -121,7 +121,7 @@ export default function Navbar() {
           className="download-btn font-normal text-white transition-colors text-sm download-rise"
           style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}
         >
-          Download Let Me Go
+          Download Let Me Goo
           <span className="ml-3 inline-flex items-center">
             {typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
               ? <SiAppstore aria-hidden />

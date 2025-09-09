@@ -1,16 +1,24 @@
 import React from 'react'
 import Image from 'next/image'
 
-const team = [
-  { name: 'Richin R chandran', role: '', img: '/richin.jpeg' },
-  { name: 'Muhammed R', role: '', img: '/muhammed.jpeg' },
-  { name: 'DARSHAN KUMAR', role: '', img: '/darshan.jpeg' },
-  { name: 'Edwin Emmanuel Roy', role: '', img: '/edwin.jpeg' },
-  { name: 'Aswanth', role: '', img: '/avatar.avif' },
-  { name: 'Muhammed Yasin', role: '', img: '/yasin.jpeg' },
- { name: 'Alan', role: '', img: '/avatar.avif' },
-  { name: 'Jishnu', role: '', img: '/jishnu.jpeg' },
-  { name: 'Nifty', role: '', img: '/nifty.jpeg' },
+type Member = {
+  name: string
+  role: string
+  img: string
+  x?: string
+  linkedin?: string
+}
+
+const team: Member[] = [
+  { name: 'Richin R chandran', role: '', img: '/richin.jpeg', linkedin: 'https://www.linkedin.com/in/richinrchandran/', x: 'https://www.x.com/richinrchandran/' },
+  { name: 'Muhammed R', role: '', img: '/muhammed.jpeg', x: '#', linkedin: '#' },
+  { name: 'DARSHAN KUMAR', role: '', img: '/darshan.jpeg', x: '#', linkedin: '#' },
+  { name: 'Edwin Emmanuel Roy', role: '', img: '/edwin.jpeg', x: '#', linkedin: '#' },
+  { name: 'Aswanth', role: '', img: '/avatar.avif', x: '#', linkedin: '#' },
+  { name: 'Muhammed Yasin', role: '', img: '/yasin.jpeg', x: '#', linkedin: '#' },
+  { name: 'Alan', role: '', img: '/avatar.avif', x: '#', linkedin: '#' },
+  { name: 'Jishnu', role: '', img: '/jishnu.jpeg', x: '#', linkedin: '#' },
+  { name: 'Nifty', role: '', img: '/nifty.jpeg', x: '#', linkedin: '#' },
 ]
 
 export default function Page() {
@@ -32,8 +40,26 @@ export default function Page() {
                   <div className="mt-2 text-xl font-bold tracking-tight">{member.name.toUpperCase()}</div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <button className="w-6 h-6 rounded-full bg-gray-900 text-white text-xs flex items-center justify-center">x</button>
-                  <button className="w-6 h-6 rounded-full bg-black text-white text-xs flex items-center justify-center">in</button>
+                  {member.x && (
+                    <a
+                      href={member.x}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-6 h-6 rounded-full bg-gray-900 text-white text-xs flex items-center justify-center"
+                    >
+                      x
+                    </a>
+                  )}
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-6 h-6 rounded-full bg-black text-white text-xs flex items-center justify-center"
+                    >
+                      in
+                    </a>
+                  )}
                 </div>
               </div>
             </article>

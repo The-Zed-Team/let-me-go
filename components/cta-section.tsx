@@ -19,15 +19,15 @@ const CTASection = () => (
         className="flex justify-center items-center rounded-full bg-[#3B36F4] px-6 py-2 sm:px-8 sm:py-3 text-white text-base sm:text-lg font-medium shadow transition hover:bg-[#2823c7] focus:outline-none focus:ring-2 focus:ring-[#3B36F4] focus:ring-offset-2 text-left"
         style={{ fontFamily: 'General Sans, sans-serif' }}
         onClick={() => {
-          const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+          const isApple = typeof navigator !== 'undefined' && (/iPad|iPhone|iPod|Mac/.test(navigator.userAgent) || navigator.platform === 'MacIntel');
           const iosUrl = 'https://apps.apple.com/in/app/letmegoo/id6751348254';
           const androidUrl = 'https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share';
-          window.location.href = isIOS ? iosUrl : androidUrl;
+          window.location.href = isApple ? iosUrl : androidUrl;
         }}
         >
         <span className="mr-3">Download Free App</span>
         <span className="inline-flex items-center">
-          {typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
+          {typeof navigator !== 'undefined' && (/iPad|iPhone|iPod|Mac/.test(navigator.userAgent) || navigator.platform === 'MacIntel')
             ? <SiAppstore className="w-5 h-5" aria-hidden />
             : <FaGooglePlay className="w-5 h-5" aria-hidden />
           }

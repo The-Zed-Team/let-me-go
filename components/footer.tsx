@@ -23,6 +23,7 @@ export default function Footer() {
             <Link href="https://x.com/LetMeGooapp" className="hover:text-black transition-colors">Twitter</Link>
             {/* facebook */}
             <Link href="https://www.facebook.com/letmegooapp" className="hover:text-black transition-colors">Facebook</Link>
+              <Link href="/fair-usage" className="hover:text-black transition-colors">Fair Usage Policy</Link>
             <span className="text-gray-500 ml-4">Made with code and 💛 by <a href="https://richinnovationsplc.com/" target="_blank">Richinnovations</a></span>
           </div>
         </div>

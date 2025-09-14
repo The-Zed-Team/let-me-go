@@ -15,7 +15,9 @@ export default function Navbar() {
   return (
     <nav className="w-full px-8 lg:px-64 py-2 flex items-center justify-between bg-[#F3F3F3] sticky top-0 z-50" style={{ minHeight: '56px', fontFamily: 'Familjen Grotesk, sans-serif', backdropFilter: 'blur(32px)' }}>
       {/* Logo/Brand */}
-      <div className="font-bold text-lg flex-shrink-0 mr-4 familjen-grotesk-logo" style={{ letterSpacing: 0.5 }}>#LetMeGoo</div>
+      <Link href="/" className="flex-shrink-0 mr-4" aria-label="Home">
+        <div className="font-bold text-lg familjen-grotesk-logo" style={{ letterSpacing: 0.5 }}>#LetMeGoo</div>
+      </Link>
       {/* Centered Navigation */}
       {/* Desktop Nav Links */}
       <div className="flex-1 flex justify-center mx-[-40px] nav-links-desktop">

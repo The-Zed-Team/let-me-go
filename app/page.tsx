@@ -27,7 +27,7 @@ export default function Home() {
       {/* Hero section - positioned lower on screen */}
       <main className="flex flex-col items-center justify-end min-h-screen px-4 relative gap-16 overflow-hidden" style={{ fontFamily: 'General Sans, sans-serif' }}>
         {/* Text content positioned in lower portion */}
-        <div className="flex flex-col items-center justify-center z-20 max-w-4xl mx-auto mb-12 mt-52">
+        <div className="flex flex-col items-center justify-center z-20 max-w-4xl mx-auto mb-12 mt-32">
           <h1
             className="text-center text-black mb-6  text-4xl mdtext-5xl lg:text-6xl font-general-sans-medium"
           >
@@ -43,10 +43,10 @@ export default function Home() {
             type="button"
             className="inline-flex capitalize items-center px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-[#1a23c3] text-white font-semibold text-sm sm:text-base shadow-md hover:bg-[#111a9c] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1a23c3]"
             onClick={() => {
-              const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+              const isApple = typeof navigator !== 'undefined' && (/iPad|iPhone|iPod|Mac/.test(navigator.userAgent) || navigator.platform === 'MacIntel');
               const iosUrl = 'https://apps.apple.com/in/app/letmegoo/id6751348254';
               const androidUrl = 'https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share';
-              window.location.href = isIOS ? iosUrl : androidUrl;
+              window.location.href = isApple ? iosUrl : androidUrl;
             }}
             >
             Let&apos;s get started

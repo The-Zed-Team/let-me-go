@@ -36,6 +36,11 @@ export default function Navbar() {
                 <Link href="/whyletmego" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}>Why Let Me Goo?</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link href="/download" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}>Download</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
              {/* <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <a href="#testimonial" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
@@ -79,6 +84,7 @@ export default function Navbar() {
           <Link href="/" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="/team" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Team</Link>
           <Link href="/whyletmego" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Why Let Me Goo?</Link>
+          <Link href="/download" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Download</Link>
           <Link href="/contact" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Contact</Link>
            {/*  <a href="#testimonial" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
             e.preventDefault();
@@ -96,15 +102,18 @@ export default function Navbar() {
             }, 100);
           }}>Wall Of Love</a> */}
           <a
-            href="https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="download-btn font-normal text-white transition-colors text-sm download-rise mt-4"
+            onClick={() => {
+              const isApple = typeof navigator !== 'undefined' && (/iPad|iPhone|iPod|Mac/.test(navigator.userAgent) || navigator.platform === 'MacIntel');
+              const iosUrl = 'https://apps.apple.com/in/app/letmegoo/id6751348254';
+              const androidUrl = 'https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share';
+              window.open(isApple ? iosUrl : androidUrl, '_blank');
+            }}
+            className="download-btn font-normal text-white transition-colors text-sm download-rise mt-4 cursor-pointer"
             style={{ fontFamily: 'Familjen Grotesk, sans-serif', width: '90%', justifyContent: 'center' }}
           >
             Download Let Me Goo
             <span className="ml-3 inline-flex items-center">
-              {typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
+              {typeof navigator !== 'undefined' && (/iPad|iPhone|iPod|Mac/.test(navigator.userAgent) || navigator.platform === 'MacIntel')
                 ? <SiAppstore aria-hidden />
                 : <FaGooglePlay aria-hidden />
               }
@@ -115,15 +124,18 @@ export default function Navbar() {
       {/* Download Button */}
       <div className="flex-shrink-0 ml-4 download-desktop-btn">
         <a
-          href="https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="download-btn font-normal text-white transition-colors text-sm download-rise"
+          onClick={() => {
+            const isApple = typeof navigator !== 'undefined' && (/iPad|iPhone|iPod|Mac/.test(navigator.userAgent) || navigator.platform === 'MacIntel');
+            const iosUrl = 'https://apps.apple.com/in/app/letmegoo/id6751348254';
+            const androidUrl = 'https://play.google.com/store/apps/details?id=com.letmegoo.app&pcampaignid=web_share';
+            window.open(isApple ? iosUrl : androidUrl, '_blank');
+          }}
+          className="download-btn font-normal text-white transition-colors text-sm download-rise cursor-pointer"
           style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}
         >
           Download Let Me Goo
           <span className="ml-3 inline-flex items-center">
-            {typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
+            {typeof navigator !== 'undefined' && (/iPad|iPhone|iPod|Mac/.test(navigator.userAgent) || navigator.platform === 'MacIntel')
               ? <SiAppstore aria-hidden />
               : <FaGooglePlay aria-hidden />
             }

@@ -182,7 +182,7 @@ export default function HallOfFamePage() {
                 Share Your Experience
               </h2>
               <p className="text-lg lg:text-xl mb-8 opacity-90 max-w-2xl mx-auto leading-relaxed">
-                Have you used Let Me Goo for something amazing? We'd love to feature your story 
+                Have you used Let Me Goo for something amazing? We&apos;d love to feature your story 
                 in our Hall of Fame and inspire others!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

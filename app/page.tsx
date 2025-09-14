@@ -85,7 +85,7 @@ export default function Home() {
           
           {/* Phone image centered */}
           <Image
-            src="/phone.png"
+            src="/hero-image.jpg"
             alt="Phone screenshot"
             width={420}
             height={600}

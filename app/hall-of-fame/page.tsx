@@ -10,14 +10,16 @@ type VideoItem = {
 }
 
 const videos: VideoItem[] = [
-  {
+{
     id: '1',
-    title: 'Quick Parking Solution',
-    description: 'Watch how Let Me Goo solves parking conflicts in seconds',
-    url: 'https://youtube.com/shorts/uznyyvg0ylg',
-    embedId: 'uznyyvg0ylg',
+    title: 'Community Impact',
+    description: 'Making parking better for everyone in the community',
+    url: '',
+    embedId: 'xGZX6kIw1QE',
     type: 'short'
   },
+ 
+  
   {
     id: '2',
     title: 'Instant Notification',
@@ -41,23 +43,23 @@ const videos: VideoItem[] = [
     url: 'https://youtube.com/shorts/QQlpBFB_Uag',
     embedId: 'QQlpBFB_Uag',
     type: 'short'
-  },
+  }, 
   {
     id: '5',
-    title: 'Community Impact',
-    description: 'Making parking better for everyone in the community',
-    url: 'https://youtube.com/shorts/xGZX6kIw1QE',
-    embedId: 'xGZX6kIw1QE',
-    type: 'short'
-  },
-  {
-    id: '6',
     title: 'Complete Let Me Goo Experience',
+    description: 'Watch how Let Me Goo solves parking conflicts in seconds',
+    url: 'https://youtube.com/shorts/uznyyvg0ylg',
+    embedId: 'uznyyvg0ylg',
+    type: 'short'
+  },{
+    id: '6',
+    title: 'Quick Parking Solution',
     description: 'Discover the full potential of our parking solution',
     url: 'https://www.youtube.com/watch?v=raUJ14FmLyg',
     embedId: 'raUJ14FmLyg',
     type: 'full'
-  }
+  },
+
 ]
 
 export default function HallOfFamePage() {

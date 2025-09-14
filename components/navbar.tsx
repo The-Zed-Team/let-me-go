@@ -41,6 +41,11 @@ export default function Navbar() {
                 <Link href="/download" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}>Download</Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link href="/hall-of-fame" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }}>Hall of Fame</Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
              {/* <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <a href="#testimonial" className="text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
@@ -85,6 +90,7 @@ export default function Navbar() {
           <Link href="/team" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Team</Link>
           <Link href="/whyletmego" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Why Let Me Goo?</Link>
           <Link href="/download" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Download</Link>
+          <Link href="/hall-of-fame" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Hall of Fame</Link>
           <Link href="/contact" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={() => setMenuOpen(false)}>Contact</Link>
            {/*  <a href="#testimonial" className="py-2 px-4 w-full text-center text-gray-600 font-medium hover:text-black transition-colors" style={{ fontFamily: 'Familjen Grotesk, sans-serif' }} onClick={e => {
             e.preventDefault();

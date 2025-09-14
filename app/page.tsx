@@ -82,6 +82,7 @@ export default function Home() {
               transform: `translateY(-${30 + parallax * 0.2}%) translateX(20%)`
             }}
           />
+          
           {/* Phone image centered */}
           <Image
             src="/phone.png"

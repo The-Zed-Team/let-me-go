@@ -94,6 +94,7 @@ export default function Home() {
             style={{
               transform: `translateY(-${parallax * 0.1}px)`
             }}
+
           />
         </div>
       </main>

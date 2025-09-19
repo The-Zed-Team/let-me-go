@@ -85,7 +85,7 @@ export default function Home() {
           
           {/* Phone image centered */}
           <Image
-            src="/hero-image.jpg"
+            src="/hero-image.png"
             alt="Phone screenshot"
             width={420}
             height={600}
@@ -94,6 +94,7 @@ export default function Home() {
             style={{
               transform: `translateY(-${parallax * 0.1}px)`
             }}
+
           />
         </div>
       </main>
